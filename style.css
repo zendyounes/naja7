@@ -49,11 +49,37 @@ p {
     font-weight: bold;
 }
 
+.animated-svg {
+    margin-top: 30px;
+    animation: drawCircle 3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.circle {
+    fill: none;
+    stroke: #3498db;
+    stroke-width: 4;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 251;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes drawCircle {
+    0% {
+        opacity: 0;
+        stroke-dashoffset: 251;
+    }
+    100% {
+        opacity: 1;
+        stroke-dashoffset: 0;
     }
 }
