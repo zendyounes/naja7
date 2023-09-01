@@ -11,6 +11,18 @@ body {
 
 .container {
     text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1, p, #countdown {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+h1.animated, p.animated, #countdown.animated {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h1 {
@@ -35,4 +47,13 @@ p {
 
 #timer {
     font-weight: bold;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
